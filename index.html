@@ -35,7 +35,7 @@ ul,ol,li {list-style: none;}
 .slider .swiper-next {display: inline-block;width: 35px;height: 35px;margin:30px 15px 0;background:url('images/arrow.png') center center no-repeat;background-size: cover;text-indent: -999em;cursor: pointer;}
 .slider .swiper-prev {transform: rotateY(180deg);}
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .slide_list > li { width: calc(50% - 20px);}
     .slide_list > li.swiper-slide-next:after,
     .slide_list > li.swiper-slide-prev:after,
@@ -87,12 +87,12 @@ function slider() {
 
     $(window).on('resize', function () {
         winW = window.innerWidth;
-        if(winWChk != 'mo' && winW < 768){ //모바일 버전으로 전환할 때
+        if(winWChk != 'mo' && winW <= 768){ //모바일 버전으로 전환할 때
             winWChk = 'mo'
             sliderAct();
         }
 
-        if(winWChk != 'pc' && winW > 768){ //PC 버전으로 전환할 때
+        if(winWChk != 'pc' && winW >= 769){ //PC 버전으로 전환할 때
             winWChk = 'pc'
             sliderAct();
         }
